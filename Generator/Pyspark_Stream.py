@@ -19,12 +19,13 @@ schema_kelembaban = StructType() \
     .add("gudang_id", StringType()) \
     .add("kelembaban", IntegerType())
 
-kafka_bootstrap_servers = "localhost:9092"
+# Use host.docker.internal to access host machine from Docker container
+kafka_bootstrap_servers = "host.docker.internal:9092"
 
 suhu_df = spark.readStream.format("kafka") \
     .option("kafka.bootstrap.servers", kafka_bootstrap_servers) \
     .option("subscribe", "sensor-suhu-gudang") \
-    .load()
+    .load() 
 
 suhu_parsed = suhu_df.selectExpr("CAST(value AS STRING)") \
     .select(from_json(col("value"), schema_suhu).alias("data")) \
