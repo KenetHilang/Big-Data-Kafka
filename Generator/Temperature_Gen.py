@@ -16,4 +16,5 @@ while True:
         data = {"gudang_id": gudang, "suhu": suhu}
         producer.send("sensor-suhu-gudang", value=data)
         print(f"Sent: {data}")
+        time.sleep(3)
     time.sleep(5)

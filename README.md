@@ -73,6 +73,8 @@ Gudang G2: Suhu 85°C
 Gudang G3: Kelembaban 74%
 ```
 
+![It Works](image-6.png)
+
 ---
 
 ## 4. Gabungkan Stream dari Dua Sensor
