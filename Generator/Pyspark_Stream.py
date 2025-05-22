@@ -123,7 +123,7 @@ def process_warnings(df, batch_id):
             static_df = create_static_status_report()
             static_data = {row['gudang_id']: row for row in static_df.collect()}
             
-            print("\n[PERINGATAN KRITIS]")
+            print("\n[STATUS GUDANG]")
             for gudang_id in critical_warehouses:
                 if gudang_id in static_data:
                     row = static_data[gudang_id]
@@ -135,7 +135,7 @@ def process_warnings(df, batch_id):
 
 def process_joined_warnings(df, batch_id):
     if df.count() > 0:
-        print("\n[PERINGATAN KRITIS]")
+        print("\n[STATUS GUDANG]")
         for row in df.collect():
             print(f"Gudang {row['gudang_id']}:")
             print(f"- Suhu: {row['suhu']}°C")
