@@ -30,9 +30,9 @@ Membuat dua Kafka producer terpisah:
 {"gudang_id": "G1", "suhu": 82}
 ````
 
-![Temp_Gen](image.png)
-![Proof](image-2.png)
-![Proof_2](image-4.png)
+![Temp_Gen](./Assets/image.png)
+![Proof](./Assets/image-2.png)
+![Proof_2](./Assets/image-4.png)
 
 
 ### b. Producer Kelembaban
@@ -44,9 +44,9 @@ Membuat dua Kafka producer terpisah:
 {"gudang_id": "G1", "kelembaban": 75}
 ```
 
-![Humidity_Gen](image-1.png)
-![Humid_proof](image-3.png)
-![Humid_Proof_2](image-5.png)
+![Humidity_Gen](./Assets/image-1.png)
+![Humid_proof](./Assets/image-3.png)
+![Humid_Proof_2](./Assets/image-5.png)
 
 > Gunakan minimal 3 gudang: `G1`, `G2`, `G3`.
 
@@ -73,7 +73,7 @@ Gudang G2: Suhu 85°C
 Gudang G3: Kelembaban 74%
 ```
 
-![It Works](image-6.png)
+![It Works](./Assets/image-6.png)
 
 ---
 
@@ -114,5 +114,7 @@ Gudang G4:
 - Kelembaban: 75%
 - Status: Kelembaban tinggi, suhu aman
 ```
+
+![Peringatan](./Assets/image-7.png)
 
 
